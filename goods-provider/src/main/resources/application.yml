@@ -1,0 +1,22 @@
+# 应用名称
+#spring.application.name=goods-provider
+server:
+  port: 8001
+spring:
+  application:
+    name: goods-provider
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone = GMT&&rewriteBatchedStatements=true
+      username: root
+      password: 123456
+
+mybatis:
+  mapper-locations: classpath:mappers/*.xml
+  type-aliases-package: com.example.goodscommons.pojo
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761/eureka
+

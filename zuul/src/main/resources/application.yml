@@ -1,0 +1,18 @@
+eureka:
+  client:
+    service-url:
+      defaultzone: http://localhost:8761/eureka
+server:
+  port: 8080
+spring:
+  application:
+    name: zool
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+zool:
+  routes:
+    goods-ui: /goods/**
+    customer-ui: /customer/**
